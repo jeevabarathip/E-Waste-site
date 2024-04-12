@@ -1,0 +1,342 @@
+/* 
+ * 	Core Owl Carousel CSS File
+ *	v1.3.2
+ */
+
+/* clearfix */
+
+#owl1 .item {
+	background: none;
+	width: 980px;
+	margin: 64px auto 0;
+}
+
+#owl1 .item h3 {
+	color: #ffffff;
+	margin-bottom: 26px;
+}
+
+#owl1 .item p {
+	font: italic 20px/30px 'Lato', sans-serif; 
+	color: #f0eddf;
+}
+
+#owl1 .item a {
+	font: 700 16px/30px 'Lato', sans-serif;
+	display: inline-block;
+	margin-top: 12px;
+}
+#owl1 .item a:hover {color: #f0eddf;}
+
+.bq1 {
+	width: 45px;
+	display: inline-block;
+	position: relative;
+	height: 39px;
+	margin-bottom: 19px;
+}
+
+
+
+#owl {margin: 31px 0 43px;}
+
+.owl-carousel .owl-wrapper:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+/* display none until init */
+
+.owl-carousel .owl-wrapper{
+	display: none;
+	position: relative;
+	-webkit-transform: translate3d(0px, 0px, 0px);
+}
+.owl-carousel .owl-wrapper-outer{
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+}
+.owl-carousel .owl-wrapper-outer.autoHeight{
+	-webkit-transition: height 500ms ease-in-out;
+	-moz-transition: height 500ms ease-in-out;
+	-ms-transition: height 500ms ease-in-out;
+	-o-transition: height 500ms ease-in-out;
+	transition: height 500ms ease-in-out;
+}
+	
+.owl-carousel{
+	display: none;
+	position: relative;
+	overflow: hidden;
+	padding: 0;
+	-ms-touch-action: pan-y;
+}
+	
+.owl-carousel .owl-item{float: left;}
+
+.item {
+	position: relative;
+	overflow: hidden;
+	margin: 0 auto 0;
+	padding: 0;
+	background: #fff;
+	letter-spacing: -.4px;
+	color: #a8a8a8;
+}
+
+.thumbs {
+	background: #fbf6eb;
+	position: relative;
+	text-align: center;
+	padding: 0;
+	margin: 0;
+}
+
+.thumbs .img_box {
+	overflow: hidden;
+	-webkit-transition: all 0.3s ease 0s;
+	-moz-transition: all 0.3s ease 0s;
+	-o-transition: all 0.3s ease 0s;
+	transition: all 0.3s ease 0s;
+}
+
+
+.thumbs:hover .capture {bottom: 0;}
+
+
+.capture {
+	background: url(../images/img_hov.png) 0 0 repeat;
+	padding: 10px 10%;
+	position: absolute;
+	bottom: -93px;
+	height: 73px;
+	width: 80%;
+	color: #fff;
+	text-align: left;
+
+	-webkit-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+}
+
+.capture time {
+	color: #ffffff;
+	font: 400 14px/18px 'Lato', sans-serif;
+	display: inline-block;
+	text-align: left;
+	float: left;
+}
+
+.capture span {
+	display: inline-block;
+	font-size: 12px;
+	line-height: 16px;
+}
+
+.capture a {
+	display: inline-block;
+	margin-left: 5px;
+	color: #fff;
+	text-decoration: underline;
+}
+
+.capture a:hover {text-decoration: none;}
+
+.owl-controls .owl-page,
+.owl-controls .owl-buttons div{
+	cursor: pointer;
+}
+.owl-controls {
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+/* mouse grab icon */
+.grabbing { 
+    cursor:url(../images/grabbing.png) 8 8, move;
+}
+
+/* fix */
+.owl-carousel  .owl-wrapper,
+.owl-carousel  .owl-item{
+	width: 100%;
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility:    hidden;
+	-ms-backface-visibility:     hidden;
+  -webkit-transform: translate3d(0,0,0);
+  -moz-transform: translate3d(0,0,0);
+  -ms-transform: translate3d(0,0,0);
+}
+
+
+/*
+* 	Owl Carousel Owl Theme 
+*	v1.3.2
+*/
+
+.owl-theme .owl-controls{
+	position: relative;
+	text-align: center;
+	text-indent: 0px;
+	margin-top: 22px;
+}
+
+/* Styling Next and Prev buttons */
+
+.owl-theme .owl-controls .owl-buttons div{
+	color: #FFF;
+	display: inline-block;
+	zoom: 1;
+	*display: inline;/*IE7 life-saver */
+	height: 57px;
+	text-indent: -9999px;
+	
+}
+
+/* Clickable class fix problem with hover on touch devices */
+/* Use it for non-touch hover action */
+
+.owl-theme .owl-controls.clickable .owl-buttons div:hover{
+	text-decoration: none;
+}
+
+/* Styling Pagination*/
+
+.owl-buttons .owl-prev {
+	height: 57px;
+	width: 29px;
+	position: absolute;
+	left: 0px;
+	top: -161px;
+}
+
+.owl-buttons .owl-next {
+	height: 57px;
+	width: 29px;
+	position: absolute;
+	top: -161px;
+	right: 0;	
+}
+
+.owl-buttons .owl-prev:hover {}
+
+.owl-buttons .owl-next:hover {}
+
+/* If PaginationNumbers is true */
+
+.owl-theme .owl-controls .owl-page{
+	display: inline-block;
+	zoom: 1;
+	*display: inline;/*IE7 life-saver */
+}
+.owl-theme .owl-controls .owl-page span {
+	display: block!important;
+	position: relative;
+	width: 11px;
+	height: 11px;
+	margin-right: 3px;
+	-webkit-border-radius: 500px;
+	-moz-border-radius: 500px;
+	-ms-border-radius: 500px;
+	-o-border-radius: 500px;
+	border-radius: 500px;
+	background: #fff;
+}
+
+.owl-theme .owl-controls .owl-page.active span,
+.owl-theme .owl-controls.clickable .owl-page:hover span{
+	background: #f1173b;
+}
+
+/* If PaginationNumbers is true */
+
+.owl-theme .owl-controls .owl-page span.owl-numbers{
+	height: auto;
+	width: auto;
+	color: #4f626e;
+	padding: 2px 10px;	
+	-webkit-border-radius: 500px;
+	-moz-border-radius: 500px;
+	border-radius: 500px;
+}
+
+/* preloading images */
+
+.owl-item.loading{
+	min-height: 150px;
+	background: url(../images/AjaxLoader.gif) no-repeat center center;
+}
+
+
+@media only screen and (max-width: 1299px) {
+	
+}
+
+@media only screen and (max-width: 1199px) {
+
+	#owl {margin: 30px 0 16px;}
+
+	.thumbs .img_box {
+		width: 100%;
+	}
+}
+
+@media only screen and (max-width: 995px) {
+	
+	#owl1 .item {
+		width: 80%;
+		margin: 35px auto 0;
+	}
+
+}
+
+@media only screen and (max-width: 767px) {
+
+	#owl1 .item p {
+    	color: #F0EDDF;
+    	font: italic 18px/24px 'Lato',sans-serif;
+	}
+
+	.owl-theme .owl-controls {margin: 10px 0;}
+
+	.capture {
+		bottom: -100px;
+		height: 80px;
+		padding: 10px 7%;
+		width: 86%;
+	}
+}
+
+@media only screen and (max-width: 480px) {
+	
+	.thumbs .img_box {
+		height: auto;
+	}
+
+	.capture span {font-size: 14px;}
+
+	.capture {
+		padding: 10px 6%;
+		width: 88%;
+	}
+
+	.capture time {font-weight: 600;}
+
+	.bq1, #owl1 .item h3 {margin-bottom: 15px;}
+
+	#owl1 .item p {font-size: 16px; line-height: 20px;}
+
+}
+
+@media only screen and (max-width: 320px) {
+	
+	.thumbs .img_box {height: auto;}
+}

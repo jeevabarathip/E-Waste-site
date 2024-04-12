@@ -1,0 +1,252 @@
+/****Form****/
+
+#form {
+	padding-top: 10px;
+	margin: 0 0 40px;
+	position: relative;
+	overflow: hidden;
+}
+
+#form input {
+	width: 100%;
+	height: 41px;
+	float:left;
+	background: #ffffff;
+	color: #8e8d8d;
+    font: 700 14px/18px 'Lato', sans-serif;
+    border: 1px solid #eaeaea;
+    padding: 11px 14px;
+
+    box-sizing: border-box;
+	-webkit-appearance: none;
+	-moz-box-sizing: border-box; /*Firefox 1-3*/
+	-webkit-box-sizing: border-box; /* Safari */
+}
+
+#form textarea {
+	width: 100%;
+	height: 302px;
+	background: #ffffff;
+	position: relative;
+	resize:none;
+	overflow: hidden;
+	float:left;
+	color: #8e8d8d;
+	margin: 0;
+    font: 700 14px/18px 'Lato', sans-serif;
+    padding: 11px 14px;
+    border: 1px solid #eaeaea;
+
+    box-sizing: border-box;
+	-webkit-appearance: none;
+	-moz-box-sizing: border-box; /*Firefox 1-3*/
+	-webkit-box-sizing: border-box; /* Safari */
+}
+
+#form ._placeholder {
+	color: #8e8d8d;
+    font: 700 14px/26px 'Lato', sans-serif;
+	border: none;
+    padding: 6px 14px;
+	height: 41px !important;
+	width: 100% !important;
+	position: absolute;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	cursor: text !important;
+	display: block;
+	
+	box-sizing: border-box;
+	-moz-box-sizing: border-box; /*Firefox 1-3*/
+	-webkit-box-sizing: border-box; /* Safari */
+	transition: 0.5s ease;
+	-o-transition: 0.5s ease;
+	-webkit-transition: 0.5s ease;
+}
+
+#form ._placeholder.hidden {
+	display: none;
+}
+
+#form ._placeholder.focused {
+	opacity: 0.3;
+}
+
+#form .message ._placeholder {
+	height: 100% !important;
+}
+
+#form label {
+	position:relative;
+	display: block;
+	min-height: 40px;
+	float: left;
+	width: 420px;
+	text-align: left;
+	margin: 0 0 8px 0!important;
+}
+
+#form label.message {
+	width: 100%;
+	margin-left: 0;
+	margin-bottom: 6px!important;
+}
+
+#form .error-message, 
+#form .empty-message {
+	color: #e70101;
+	font-size: 13px;
+    line-height: 40px;
+	width:auto;
+	position: absolute;
+	z-index: 999;
+	top: 0;
+	opacity: 0;
+	right: 14px;
+	float:left;
+
+	transition: 0.5s ease;
+	-o-transition: 0.5s ease;
+	-webkit-transition: 0.5s ease;
+}
+
+#form .invalid .error-message, 
+#form .empty .empty-message {
+	opacity: 1;
+	-ms-filter:'progid:DXImageTransform.Microsoft.Alpha(Opacity=100)';
+}
+
+.btns .link {margin-right: 25px;}
+
+.phone {position: relative;}
+
+.message br {
+	height: 0;
+	line-height: 0;
+}
+
+#form .success-message {
+	display: none;
+	opacity: 0;
+	position: absolute;
+    border: 1px solid #eaeaea;
+	background: #ffffff;
+	color: #8e8d8d;
+	width: 420px;
+	height: 139px;
+	line-height: 130px;
+	text-align: center;
+	z-index: 999;
+	font-family: 'Lato', sans-serif;
+	font-weight: normal;
+
+	box-sizing: border-box;
+	-moz-box-sizing: border-box; /*Firefox 1-3*/
+	-webkit-box-sizing: border-box; /* Safari */
+	transition: 0.5s ease;
+	-o-transition: 0.5s ease;
+	-webkit-transition: 0.5s ease;
+}
+
+#form.success .success-message {
+	display: block;
+	opacity: 1;
+	-ms-filter:'progid:DXImageTransform.Microsoft.Alpha(Opacity=100)';
+}
+
+.success_wrapper {position: relative;}
+
+.address-1 { 
+	position: relative;
+	overflow: hidden; 
+	margin: 22px 0 0;
+	padding: 0;
+	font-family: 'Lato';
+	text-align: left;
+}
+
+.address-1 span { 
+	float: left; 
+	font-weight: 700;
+}
+.address-1 p { 
+	color: #333333; 
+	font-weight: 700;
+	font-size: 18px;
+	line-height: 21px;
+	margin-bottom: 9px;
+}
+
+.address-1 dl dd {  
+	text-align: right;
+	width: 181px; 
+	color: #8e8d8d;
+	font: 700 14px/21px 'Lato', sans-serif;
+}
+
+.address-1 a { 
+	display: inline-block; 
+	color: #44a8da;
+	font-weight: 700;
+	text-decoration: underline;
+	margin-bottom: 4px;
+}
+
+.address-1 a:hover { 
+	text-decoration: none;
+	color: #333333; 
+}
+
+.map_c {
+	width: 100%;
+	height: 410px;
+	margin-top: 10px;
+}
+
+.btns .link1 {
+	width: 134px!important;
+	float: right;
+}
+
+@media only screen and (max-width: 1199px) {
+	
+	#form label {width: 100%;}
+
+	#form .success-message {width: 100%;}
+
+}
+
+@media only screen and (max-width: 995px) {
+
+	.map_c {height: 449px;}
+}
+
+@media only screen and (max-width: 767px) {
+
+	.map figure {
+		width: 100% !important;
+		display: block !important;
+		margin-right: 0px !important;
+	}
+
+	.map_c {height: 300px;}
+ 
+    #form textarea { height: 150px !important; }
+
+    .address-1 {margin-bottom: 25px;}
+
+  
+}
+
+@media only screen and (max-width: 479px) {
+
+    #form textarea { height: 165px !important; }
+
+    #form .success-message {height: 93px; line-height: 92px;}
+
+    .map_c {height: 260px;}
+
+    #form label {margin-bottom: 10px!important;}
+}

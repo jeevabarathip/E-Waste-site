@@ -1,0 +1,37 @@
+
+.camera_wrap .camera_pag .camera_pag_ul li > span,
+.image,
+.social-links li a,
+.social-links1 li a,
+.owl-theme .owl-controls .owl-page span,
+.circle { behavior:url(js/PIE.htc); }
+
+#form .invalid .error-message, 
+#form .empty .empty-message { display: block; }
+
+#form .error-message,
+#form .empty-message { display: none; }
+
+.social-links li a:hover i,
+.social-links1 li a:hover i {line-height: 10px;}
+
+.copy > span {margin-bottom: 0px;}
+
+.list-2 li a {
+	display: inline-block;
+	position: relative;
+	filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
+}
+
+.list-2 li a:hover {
+	filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+}
+
+.address-1 dl dd {width: 210px;}
+
+.tel div {padding-left: 375px;}
+
+.address a {margin-bottom: 0;}
+
+#form input {padding-top: 10px;}
+

@@ -1,0 +1,47 @@
+<div id="map" style="height: 400px; width: 100%;"></div>
+<script>
+  function initMap() {
+    var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 12, // Adjust the zoom level as needed
+      center: { lat: YOUR_LATITUDE, lng: YOUR_LONGITUDE }, // Set the initial map center
+    });
+
+    // Create markers for your multiple locations
+    var marker1 = new google.maps.Marker({
+      position: { lat: LATITUDE1, lng: LONGITUDE1 },
+      map: map,
+      title: 'Location 1',
+    });
+
+    var marker2 = new google.maps.Marker({
+      position: { lat: LATITUDE2, lng: LONGITUDE2 },
+      map: map,
+      title: 'Location 2',
+    });
+
+    // Add more markers for additional locations as needed
+
+    // Create a search bar
+    var input = document.getElementById('pac-input');
+    var searchBox = new google.maps.places.SearchBox(input);
+    map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
+
+    // Add a listener to change the map's center when a user selects a location
+    map.addListener('bounds_changed', function () {
+      searchBox.setBounds(map.getBounds());
+    });
+
+    // Listen for the event when a user selects a location from the search results
+    searchBox.addListener('places_changed', function () {
+      var places = searchBox.getPlaces();
+
+      if (places.length === 0) {
+        return;
+      }
+
+      // Set the map's center to the selected location
+      map.setCenter(places[0].geometry.location);
+    });
+  }
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places&callback=initMap" async defer></script>
